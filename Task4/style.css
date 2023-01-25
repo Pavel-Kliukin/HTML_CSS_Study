@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(223, 148, 87);
+    font-family: font-family: 'Open Sans', sans-serif;;
+}
+
+header {
+    background-color: black;
+    text-align: left;
+    color: rgb(245, 128, 11);
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 10px;
+    background-color: rgb(8, 8, 8);
+}
+
+nav ul li a {
+    color: rgb(245, 128, 11);
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    background-color: black;
+}
+
+main,
+header,
+h2 {
+    padding: 20px;
+    padding-left: 20;
+}
+
+h2 {
+    padding-left: 0;
+    font-size: 50;
+    text-align: center;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.box {
+    background-color: coral;
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 20px;
+    margin-left: 0;
+    float: left;
+    font-weight: 700;
+}
