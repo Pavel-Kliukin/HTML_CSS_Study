@@ -1,0 +1,36 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+input,
+button {
+    font-family: inherit;
+    padding: 10px;
+    font-size: 14px;
+}
+
+button {
+    border: none;
+    background-color: green;
+    color: white;
+    margin: 20px 0;
+}
+
+label {
+    display: inline-block;
+    width: 50px;
+    background: yellow;
+}
+
+input {
+    display: inline-block;
+    width: 50px;
+}
+
+.form_group_gasoline {
+    margin: 10px 0;
+}
+
+.form_group_temperature {
+    margin: 10px 0;
+}
