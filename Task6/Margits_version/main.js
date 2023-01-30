@@ -30,17 +30,22 @@ const calcTemperature = (scale) => {
 }
 */
 
-const tempConverter = () => {
+const tempConverter = (id) => {
     const celInput = document.querySelector
-    ('#celsius');
+    ('#cel');
     const fahInput = document.querySelector
     ('#fah');
     const kelInput = document.querySelector
-    ('#kelvin');
+    ('#kel');
 
-    console.log(celInput.value);
-    console.log(fahInput.value);
-    console.log(kelInput.value);
-
-    fahInput.value = celInput.value * 1.8 +32;
+    if (id=="cel") {
+        fahInput.value = Number(+celInput.value * 1.8 +32).toFixed(2);
+        kelInput.value = Number(+celInput.value + 273.15).toFixed(2);
+    } else if (id=="fah") {
+        celInput.value = Number((+fahInput.value - 32) / 1.8).toFixed(2);
+        kelInput.value = Number((+fahInput.value - 32) / 1.8 + 273.15).toFixed(2);
+    } else if (id=="kel") {
+        fahInput.value = Number((+kelInput.value -273,15) * 1.8 +32).toFixed(2);
+        celInput.value = Number(+kelInput.value - 273.15).toFixed(2);
+    }
 };
