@@ -11,20 +11,23 @@ button {
 
 button {
     border: none;
+    border-radius: 5px;
     background-color: green;
     color: white;
     margin: 20px 0;
 }
 
 label {
-    display: inline-block;
+    /* display: inline-block; */
     width: 50px;
     background: yellow;
 }
 
 input {
     display: inline-block;
-    width: 70px;
+    height: 10px;
+    width: 60px;
+    
 }
 
 .form_group_gasoline {
@@ -32,5 +35,16 @@ input {
 }
 
 .form_group_temperature {
-    margin: 10px 0;
+    margin: 10px 10px 10px;
+    
+    
+}
+
+.form2 {
+    background-color: bisque;
+    height: 200px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
 }

@@ -18,17 +18,6 @@ const calcGasoline = () => {
     answer.textContent = text;
 };
 
-/*
-const calcTemperature = (scale) => {
-    celsius = +document.querySelector('#celsius').value;
-    fah = +document.querySelector('#fah').value;
-    kelvin = +document.querySelector('#kelvin').value;
-    if (scale = 'celsius') {let output = celsius}
-    else if (scale = 'fah') {let output = fah}
-    else if (scale = 'fah') {let output = fah}
-    console.log(celsius)
-}
-*/
 
 const tempConverter = (id) => {
     const celInput = document.querySelector
