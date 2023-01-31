@@ -1,5 +1,14 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: bisque;
+}
+
+header {
+    background-color: rgb(223, 148, 87);
+}
+
+h2 {
+    text-align: center;
 }
 
 input,
@@ -23,11 +32,10 @@ label {
     background: yellow;
 }
 
-input {
-    display: inline-block;
+input, label {
+    display:inline-block;
     height: 10px;
     width: 60px;
-    
 }
 
 .form_group_gasoline {
@@ -35,16 +43,31 @@ input {
 }
 
 .form_group_temperature {
-    margin: 10px 10px 10px;
+    margin: 20px 20px 20px 20px;
     
     
 }
 
-.form2 {
-    background-color: bisque;
+.form1 {
+    background-color: rgb(223, 148, 87);
     height: 200px;
     width: 400px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 15px;
+    text-align:justify;
+    /* text-align-last:justify; */
+    vertical-align: middle;
+}
+
+.form2 {
+    background-color: rgb(223, 148, 87);
+    height: 200px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    text-align:justify;
+    /* text-align-last:justify; */
+    vertical-align: middle;
 }

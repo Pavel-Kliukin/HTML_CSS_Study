@@ -28,13 +28,14 @@ const tempConverter = (id) => {
     ('#kel');
 
     if (id=="cel") {
-        fahInput.value = Number(+celInput.value * 1.8 +32).toFixed(2);
-        kelInput.value = Number(+celInput.value + 273.15).toFixed(2);
+        fahInput.value = (+celInput.value * 1.8 +32).toFixed(2);
+        kelInput.value = (+celInput.value + 273.15).toFixed(2);
     } else if (id=="fah") {
-        celInput.value = Number((+fahInput.value - 32) / 1.8).toFixed(2);
-        kelInput.value = Number((+fahInput.value - 32) / 1.8 + 273.15).toFixed(2);
+        celInput.value = ((+fahInput.value - 32) / 1.8).toFixed(2);
+        kelInput.value = ((+fahInput.value - 32) / 1.8 + 273.15).toFixed(2);
     } else if (id=="kel") {
-        fahInput.value = Number((+kelInput.value -273,15) * 1.8 +32).toFixed(2);
-        celInput.value = Number(+kelInput.value - 273.15).toFixed(2);
+        fahInput.value = ((+kelInput.value - 273.15) * 1.8 +32).toFixed(2);
+        celInput.value = (+kelInput.value - 273.15).toFixed(2);
     }
 };
+

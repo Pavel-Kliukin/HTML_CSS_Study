@@ -8,20 +8,24 @@
     <title>Calculators</title>
 </head>
 <body>
-    <h1>Calculators</h1>
+    <header>
+        <div class="logo">
+            <h1>Calculators</h1>
+        </div>
+    </header>
     <h2>Gasoline price</h2>
-    <p>
-        Tjbdfhjkdsaf ncbjadhfg adfajgbjd sajgdwjgsdfg
-        <ul>
-            <li>
-                If there are more 10 litres, then the message on the screen: "good"
-            </li>
-            <li>
-                If tless, it shows
-            </li>
-        </ul>
-    </p>
-    <form>
+    <form class="form1">
+        <p>
+            Tjbdfhjkdsaf ncbjadhfg adfajgbjd sajgdwjgsdfg
+            <ul>
+                <li>
+                    If there are more 10 litres, then the message on the screen: "good"
+                </li>
+                <li>
+                    If tless, it shows
+                </li>
+            </ul>
+        </p>
         <div class="form_group_gasoline">
             <label for="price">Price</label>
             <input type="number" id="price"/>
@@ -30,32 +34,29 @@
             <label for="money">Money</label>
             <input type="number" id="money"/>
         </div> 
-    </form>
-    <button onclick="calcGasoline()">Calculate</button>
+        <button onclick="calcGasoline()">Calculate</button>
     
-    <p id="answer"></p>
-
+        <p id="answer"></p>
+    </form>
+<br><br><br><br>
     <h2>Temperature convertor</h2>
     <form class="form2">
         <div class="form_group_temperature">
             <label for="celsius">Celsius</label>
             <input type="number" 
-            onchange="tempConverter('cel')"
             oninput="tempConverter('cel')" 
             id="cel"/>
         </div>
         <div class="form_group_temperature">
             <label for="fah">Fahrenheit</label>
             <input type="number" 
-            onchange="tempConverter(this.id)"
-            oninput="tempConverter(this.id)" 
+            oninput="tempConverter(this.id)"
             id="fah"/>
         </div>
         <div class="form_group_temperature">
             <label for="kelvin">Kelvin</label>
             <input type="number" 
-            onchange="tempConverter(this.id)" 
-            oninput="tempConverter(this.id)" 
+            onchange="tempConverter(this.id)"
             id="kel"/>
         </div>   
     </form>
