@@ -1,0 +1,87 @@
+* {  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background-color: rgb(236, 156, 75);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+}
+
+#hero-banner {
+    height: 75vh;
+    background: url('https://images2.alphacoders.com/857/85700.jpg') no-repeat
+    center center/cover;
+    color: white;
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container {
+    display: flex; /* It affects on the children (#left and #right) */
+}
+
+#left {
+    background-color: aquamarine;
+    width: 25vw;
+    display: flex; /* It affects on the children (1, 2, 3, 4, 5) */
+    flex-direction: column-reverse; /* displays items in column */
+}
+
+#right {
+    background-color: rgb(144, 127, 255);
+    width: 75vw;
+    display: flex; /* It affects on the children (1, 2, 3, 4, 5) */
+    flex-wrap: wrap; /* wraps the items when it squeezes */
+}
+
+.box {
+    height: 60px;
+    width: 60px;
+    background-color: #fff;
+    color: #333;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 576px) {
+    header {
+        padding: 1rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    #left,
+    #right {
+        width: 100vw;
+    }
+    #left {
+        flex-direction: row;
+    }
+    .container {
+        flex-direction: column;
+    }
+}
