@@ -1,0 +1,31 @@
+body {
+    background-color: rgb(165, 204, 212);
+}
+
+h1 {
+    color: cornsilk;
+}
+
+@media (min-width: 576px) {
+    body {
+        background-color: rgb(120, 176, 187);
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        background-color: rgb(67, 126, 137);
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        background-color: rgb(39, 94, 104);
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        background-color: rgb(23, 73, 82);
+    }
+}
