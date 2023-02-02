@@ -1,0 +1,40 @@
+* {  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    display:inline-block;
+    margin: 1vw;
+    
+}
+
+nav ul li a {
+    color: white;
+}
+
+#upper_part {
+    height: 75vh;
+    background: url('1.jpg') no-repeat
+    center center/cover;
+    color: black;
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
