@@ -17,6 +17,10 @@ header {
     align-items: center;
 }
 
+h1 {
+    margin-left: 2vw;
+}
+
 nav ul li {
     display:inline-block;
     margin: 1vw;
@@ -30,11 +34,43 @@ nav ul li a {
 #upper_part {
     height: 75vh;
     background: url('1.jpg') no-repeat
-    center center/cover;
+    top center/cover;
     color: black;
     display: flex;
     font-size: 30px;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     text-align: center;
+}
+
+h3 {
+    margin-top: 5vh;
+    margin-left: 5vw;
+    margin-bottom: 3vh;
+}
+
+#myProjects {
+    
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items: center;
+    
+}
+
+.project {
+    border-width: 1px;
+    border-color: rgb(212, 210, 210);
+    border-style: solid;
+    border-radius: 3px;
+    padding: 1rem;
+}
+
+#aboutMe {
+    background-color: rgb(236, 237, 238);
+}
+
+#aboutMeText {
+    margin: 2vw;
+    display: inline-block;
 }
