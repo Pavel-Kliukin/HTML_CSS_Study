@@ -6,7 +6,7 @@
 
 body {
     background-color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:Arial, Helvetica, sans-serif
 }
 
 header {
@@ -46,7 +46,7 @@ nav ul li a {
 h3 {
     margin-top: 5vh;
     margin-left: 5vw;
-    margin-bottom: 3vh;
+    /* margin-bottom: 3vh; */
 }
 
 #myProjects {
@@ -66,11 +66,27 @@ h3 {
     padding: 1rem;
 }
 
+.projectName {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.projectText {
+    margin-top: 0.5rem;
+    font-style: oblique;
+    color: grey;
+}
+
+.seeMore {
+    margin-top: 0.5rem;
+    color: orange;
+}
+
 #aboutMe {
     background-color: rgb(236, 237, 238);
 }
 
-#aboutMeText {
-    margin: 2vw;
+#aboutMeText, #skillsText {
+    margin: 1.5rem;
     display: inline-block;
 }
