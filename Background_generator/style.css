@@ -1,0 +1,12 @@
+* {  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background: linear-gradient(to top, blue, white); */
+    background: linear-gradient(blue, white);
+    height: 100vh; 
+    color: white;
+}

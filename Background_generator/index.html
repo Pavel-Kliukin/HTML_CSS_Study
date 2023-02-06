@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BG generator</title>
+</head>
+<body>
+    <form>
+        <h1>BG generator</h1>
+        <h2>Color</h2>
+        <input type="color" id="color1" />
+        <input type="color" id="color2" />
+        <h2>Direction</h2>
+
+        <label for="to_bottom_right">To bottom right</label>
+        <input type="radio" id="to_bottom_right" value="to bottom right" name="direction"/>
+
+        <label for="to_bottom">To bottom</label>
+        <input type="radio" id="to_bottom" value="to bottom" name="direction"/>
+
+        <label for="to_bottom_left">To bottom left</label>
+        <input type="radio" id="to_bottom_left" value="to bottom left" name="direction"/>
+
+        <label for="to_right">To right</label>
+        <input type="radio" id="to_right" value="to right" name="direction"/>
+
+        <label for="to_left">To left</label>
+        <input type="radio" id="to_left" value="to left" name="direction"/>
+
+        <label for="to_top_right">To top right</label>
+        <input type="radio" id="to_top_right" value="to top right" name="direction"/>
+
+        <label for="to_top">To top</label>
+        <input type="radio" id="to_top" value="to top" name="direction"/>
+
+        <label for="to_top_left">To top left</label>
+        <input type="radio" id="to_top_left" value="to_top_left" name="direction"/>
+
+        <h2>CSS</h2>
+        <p>background: linear-gradient(to right, red, blue);</p>
+    </form>
+    
+    <script src="main.js"></script>
+</body>
+</html>
