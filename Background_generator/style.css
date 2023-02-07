@@ -33,9 +33,11 @@ input[type='color']{
 }
 
 input[type='radio']{
+    /* To hide radiobuttons */
     display: none;
 }
 
+/* This one is for unclicked buttons */
 label {
     margin: 0.5rem;
     background-color: #545454;
@@ -47,11 +49,13 @@ label {
     align-items: center;
 }
 
+/* This one is for clicked buttons */
 input[type='radio']:checked + label {
     background-color: #9f9f9f;
     color:#333;
 }
 
+/* Here we put the buttons in 3 lines */
 .direction_grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
