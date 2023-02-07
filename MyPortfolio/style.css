@@ -52,6 +52,7 @@ h3 {
     display:flex;
     flex-direction:row;
     justify-content:space-evenly;
+    flex-wrap: wrap;
 }
 
 .project {
@@ -95,5 +96,53 @@ h3 {
 
 #aboutMeText, #skillsText {
     padding: 0 3rem 1.5rem;
-    text-align: justify;
+}
+
+form {
+    background-color: #333;
+    color: white;
+    display:inline-block;
+    text-align: center;
+    width: 100vw;
+}
+
+div {
+    padding-bottom: 1.5rem ;
+    display:flex;
+    justify-content: space-between;
+    margin-left: 30vw;
+    margin-right: 31vw;
+}
+
+#contactMeTitle {
+    padding: 2rem 0 1.5rem 0;
+    align-self: center;
+}
+
+#yourName, #email {
+    height: 30px;
+    width: 400px;
+    border: none;
+    border-radius: 5px;
+}
+
+#message {
+    height: 100px;
+    width: 400px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    height: 45px;
+    width: 235px;
+    background-color: rgb(255, 127, 80);
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+}
+
+#copyrightText {
+    padding: 1.5rem;
 }
