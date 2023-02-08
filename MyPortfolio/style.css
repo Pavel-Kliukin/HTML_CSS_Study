@@ -47,6 +47,11 @@ h3 {
     padding: 2rem 0 1rem 3rem;
 }
 
+img {
+    width: 350px;
+    height: 200px;
+}
+
 #myProjects {
     padding: 2rem 0 1.5rem 3rem;
     display:flex;
