@@ -1,96 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>My portfolio</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Pavel Kliukin</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+      <h1>Pavel Kliukin</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <section id="upper_part">
-            <h2>Welcome to my portfolio</h2>
-        </section>
-        <section id="Projects">
-            <h3>Projects</h3>
-            <section id="myProjects">
-                <article class="project">
-                    <img src="project1.jpg" alt="Project 1">
-                    <p class="projectName">ChatGPT</p>
-                    <p class="projectText">How I made ChatGPT and then sold it to Google</p>
-                    <p class="seeMore">See more</p>
-                </article>
-                <article class="project">
-                    <img src="project2.jpg" alt="Project 2">
-                    <p class="projectName">Facebook idea</p>
-                    <p class="projectText">And how Mark Zuckerberg stole it from me</p>
-                    <p class="seeMore">See more</p>
-                </article>
-                <article class="project">
-                    <img src="project3.jpg" alt="Project 3">
-                    <p class="projectName">Google maps</p>
-                    <p class="projectText">How long did it take me to draw it</p>
-                    <p class="seeMore">See more</p>
-                </article>
-            </section>
-        </section>
-        <section id="aboutMe">
-            <h3>About me</h3>
-            <!-- <img src="2.jpg" id="aboutMeImage" alt="About me" width="350" height="200"> -->
-            <video id="aboutMeImage" width="350" height="190" autoplay controls loop>
-                <source src="video.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video>
-            <p id="aboutMeText">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      <section id="upper_part">
+        <h2>Welcome to my portfolio</h2>
+      </section>
+      <section id="Projects">
+        <h3>Projects</h3>
+        <section id="myProjects">
+          <article class="project">
+            <img src="project1.jpg" alt="Project 1" />
+            <p class="projectName">ChatGPT</p>
+            <p class="projectText">
+              How I made ChatGPT and then sold it to Google
             </p>
+            <p class="seeMore">See more</p>
+          </article>
+          <article class="project">
+            <img src="project2.jpg" alt="Project 2" />
+            <p class="projectName">Facebook idea</p>
+            <p class="projectText">And how Mark Zuckerberg stole it from me</p>
+            <p class="seeMore">See more</p>
+          </article>
+          <article class="project">
+            <img src="project3.jpg" alt="Project 3" />
+            <p class="projectName">Google maps</p>
+            <p class="projectText">How long did it take me to draw it</p>
+            <p class="seeMore">See more</p>
+          </article>
         </section>
-        <section id="Skills">
-            <h3>Skills</h3>
-            <!-- <img src="skills.jpg" id="skillsImage" alt="About me" width="350" height="200"> -->
-            <video id="skillsImage" width="350" height="190" autoplay controls loop>
-                <source src="skills.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video>
-            <p id="skillsText">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-        </section>
-        <form id="contactMe">
-            
-            <h3 id="contactMeTitle">Contact me</h3>
-                
-            <div>
-                <label for="yourName">Your name</label>
-                <input type="text" id="yourName">
-            </div>
-            
-            <div>
-                <label for="email">Your Email</label>
-                <input type="email" id="email">
-            </div>
-            
-            <div>
-                <label for="message">Message to me</label>
-                <input type="text" id="message">
-            </div>
-            
-            <button id="send_button" onclick="">SEND MESSAGE</button>
-            
-                <p id="copyrightText">
-                    Copyright © My Website 2023
-                </p>
-        </form>
+      </section>
+      <section id="aboutMe">
+        <h3>About me</h3>
+        <!-- <img src="2.jpg" id="aboutMeImage" alt="About me" width="350" height="200"> -->
+        <video
+          id="aboutMeImage"
+          width="350"
+          height="190"
+          autoplay
+          controls
+          loop
+        >
+          <source src="video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <p id="aboutMeText">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </p>
+      </section>
+      <section id="Skills">
+        <h3>Skills</h3>
+        <!-- <img src="skills.jpg" id="skillsImage" alt="About me" width="350" height="200"> -->
+        <video id="skillsImage" width="350" height="190" autoplay controls loop>
+          <source src="skills.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <p id="skillsText">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </p>
+      </section>
+      <form id="contactMe">
+        <h3 id="contactMeTitle">Contact me</h3>
+
+        <div>
+          <label for="yourName">Your name</label>
+          <input type="text" id="yourName" />
+        </div>
+
+        <div>
+          <label for="email">Your Email</label>
+          <input type="email" id="email" />
+        </div>
+
+        <div>
+          <label for="message">Message to me</label>
+          <input type="text" id="message" />
+        </div>
+
+        <button id="send_button" onclick="">SEND MESSAGE</button>
+
+        <p id="copyrightText">Copyright © My Website 2023</p>
+      </form>
+    </main>
+  </body>
 </html>
