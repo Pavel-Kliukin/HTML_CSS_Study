@@ -1,48 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Pizza ordering</title>
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <h1>Go for it! Order your pizza!</h1>
-        </div>
-        <form class="order" id="order_form">
-            <label for="name">Please, enter your name:</label>
-            <input type="text" id="name" name="name" size="20">
-
-            <fieldset>
-                <legend>Choose pizza's size:</legend>
-            
-                <div>
-                  <input type="radio" id="for2" name="size"
-                         onchange="whatSize(this.id)" checked>
-                  <label for="for">For 2, the price is 7,50€</label>
-                </div>
-            
-                <div>
-                  <input type="radio" id="for4" name="size" onchange="whatSize(this.id)">
-                  <label for="for4">For 4, the price is 10,50€</label>
-                </div>
-            
-                <div>
-                    <input type="radio" id="for6" name="size" onchange="whatSize(this.id)">
-                    <label for="for6">For 6, the price is 12,50€</label>
-                </div>
-
-                <div>
-                <input type="radio" id="for8" name="size" onchange="whatSize(this.id)">
-                <label for="for8">For 8, the price is 15,50€</label>
-                </div>
-
-            </fieldset>
-        </form>
-    </header>
-    <script src="main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Pizza order</title>
+  </head>
+  <body>
+    <div id="all">
+      <div id="logo">
+        <img id="logoImg" src="logo.jpg" />
+        <h1>
+          Wellcome to your <br />
+          pizza order!
+        </h1>
+      </div>
+      <div></div>
+      <div id="back">
+        <img id="backImg" src="background.jpg" />
+      </div>
+      <p>kJHJgfhgfhgf hgjhghj jhsdfjh jhertwert qhertkhqerthqert</p>
+    </div>
+  </body>
 </html>

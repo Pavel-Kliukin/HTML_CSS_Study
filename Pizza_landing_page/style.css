@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#all {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+#logoImg {
+  width: 35vw;
+  float: left;
+}
+
+h1 {
+  color: white;
+  font-family: "Sonsie One", cursive;
+  font-size: 3rem;
+  text-align: center;
+  padding: 5rem 0 0 0;
+}
+
+p {
+  font-size: 1rem;
+  color: rgb(237, 192, 234);
+}
+
+#logo {
+  display: inline-block;
+  flex-wrap: wrap;
+}
+
+#backImg {
+  width: 100vw;
+}
