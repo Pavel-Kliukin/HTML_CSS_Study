@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- We take this code from Google icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <!-- #### -->
+    <title>JS tricks</title>
+  </head>
+  <body>
+    <header>
+      <h1>JS tricks you must know</h1>
+      <nav>
+        <button class="mobile">
+          <!-- We take this code from Google icons -->
+          <span class="material-symbols-outlined"> menu </span>
+          <!-- #### -->
+        </button>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#project">Project</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="project">
+        <h2>Project</h2>
+        <button id="modalButton" class="btn primary">Don't click me</button>
+      </section>
+      <section id="about"><h2>About</h2></section>
+      <section id="something"><h2>Something</h2></section>
+      <div class="overlay">
+        <div class="modal">
+          <h2>Modal</h2>
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+          <button id="closeButton" class="btn">x</button>
+        </div>
+      </div>
+    </main>
+    <footer id="contact">
+      <smal>Copyright</smal>
+      <button id="backToTop" class="btn primary">Back to top</button>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
