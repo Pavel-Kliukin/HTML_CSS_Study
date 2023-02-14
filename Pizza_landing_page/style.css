@@ -6,14 +6,24 @@
 
 body {
   background-color: black;
+  color: white;
   font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
 }
 
-#all {
+#logo_and_Wellcome {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: space-between;
+}
+
+#logo {
+  display: block;
+  justify-content: left;
+}
+
+#wellcome {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 #logoImg {
@@ -22,21 +32,52 @@ body {
 }
 
 h1 {
-  color: white;
+  color: antiquewhite;
   font-family: "Sonsie One", cursive;
   font-size: 3rem;
   text-align: center;
-  padding: 5rem 0 0 0;
+  padding: 5rem 2rem 0 0;
 }
 
-p {
-  font-size: 1rem;
-  color: rgb(237, 192, 234);
+form {
+  margin: 3rem;
 }
 
-#logo {
-  display: inline-block;
-  flex-wrap: wrap;
+#order {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+#left {
+  width: 48vw;
+  display: flex;
+  justify-content: right;
+}
+
+#name_input {
+  width: 10rem;
+  height: 1.5rem;
+  margin-left: 1rem;
+}
+
+#vertical_line {
+  width: 1px;
+  height: 10rem;
+  border: 1px;
+  border-style: solid;
+  border-color: aliceblue;
+  margin: 0 2rem;
+}
+
+#right {
+  width: 48vw;
+  display: flex;
+  justify-content: left;
+}
+
+#back {
+  display: flex;
 }
 
 #backImg {
