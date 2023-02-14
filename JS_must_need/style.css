@@ -121,6 +121,10 @@ footer {
   position: relative /*so the button could position itself*/;
 }
 
+#modalButton {
+  margin-top: 2rem;
+}
+
 .modal button {
   position: absolute;
   top: 1rem;
