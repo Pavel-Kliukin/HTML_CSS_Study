@@ -8,14 +8,16 @@ body {
   background-color: black;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  display: grid;
-  grid-template-columns: 50px 1880px 50px;
+  /* display: grid;
+  grid-template-columns: 1fr 1880px 1fr; */
 
 }
 
+/* .wraper {
+  grid-column: 2/3;
+} */
+
 header {
-  grid-column-start: 2;
-  grid-column-end: 3;
   height: 15vh;
   width: 100vw;
   background-color: black;
@@ -41,45 +43,14 @@ li {
   margin-right: 1rem;
 }
 
-div {
-  grid-column: 2/3;
-}
-
-/* #logo_and_Wellcome {
-  display: flex;
-} */
-
-/* #logo {
-  display: block;
-  justify-content: left;
-} */
-
-/* #wellcome {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-} */
-
-/* h1 {
-  color: antiquewhite;
-  font-family: "Sonsie One", cursive;
-  font-size: 3rem;
-  text-align: center;
-  padding: 5rem 2rem 0 0;
-} */
-
-/* form {
-  margin: 3rem;
-} */
-
 #order {
+  /* width: 100vw; */
   height: 75vh;
-  width: 100vw;
   display: flex;
   justify-content: center;
   background-image: url('background.jpg');
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: center;
   background-size: cover;
 }
 
