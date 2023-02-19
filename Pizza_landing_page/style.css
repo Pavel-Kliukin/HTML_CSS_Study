@@ -50,7 +50,7 @@ li {
   justify-content: center;
   background-image: url('background.jpg');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position:top right;
   background-size: cover;
 }
 
