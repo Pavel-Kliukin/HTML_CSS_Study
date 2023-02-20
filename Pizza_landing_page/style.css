@@ -36,6 +36,10 @@ li {
   margin-right: 1rem;
 }
 
+a {
+  color: whitesmoke;
+}
+
 #order {
   height: 75vh;
   display: flex;
@@ -83,7 +87,7 @@ select {
   text-align: center;
 }
 
-#vertical_line {
+#verticalLine {
   width: 1px;
   height: 26.5rem;
   border: 1px;
@@ -102,14 +106,50 @@ select {
 #rightBox {
   width: 15rem;
   height: 22rem;
-  border-top-style:double;
-  border-bottom-style:double;
+  border-top-style:dashed;
+  border-bottom-style:dashed;
   border-radius: 0px;
   background-color: rgb(161, 167, 173);
   color: rgb(73, 72, 72);
   font-family: 'Cutive Mono', monospace;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#rightTitle {
+  margin-bottom: 1rem;
   text-align: center;
+}
+
+#rightPizzaSize, #rightToppingsList, #rightWTE {
+  display: flex;
+  justify-content: space-between;
+}
+
+#total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#totalName, #totalPrice {
+  font-size: 1.3rem;
+}
+
+#rightToppingsTitle {
+  text-align: left;
+}
+
+#toppingName {
+  margin-left: 2rem;
+}
+
+#totalPriceBlock {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
 }
 
 input::placeholder {
