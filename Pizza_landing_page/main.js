@@ -1,5 +1,6 @@
 let pizzaPrice = 7.5
 let toppingsPrice = 0
+let toppingsQuantity = 8 //the quantity of available toppings
 let whereToEatPrice = 0
 let totalAmount = 7.50
 
@@ -18,6 +19,45 @@ function pizzaSize(size, price) {
   pizzaSizeName.textContent = 'Size: ' + size
   pizzaSizePrice.textContent = price
   pizzaPrice = +price
+}
+
+//TOPPINGS BLOCK
+let toppingsArr = []
+function selectToppings(value) {
+
+  if (toppingsArr.includes(value)) {
+    toppingsArr.splice(toppingsArr.indexOf(value), 1) //This is the right way to delete exact item from an array insted of .pop()
+  } else {
+    toppingsArr.push(value)
+  }
+  //this is for toppings price calculation as a part of total price:
+  if (toppingsArr.length <= 4) {
+    toppingsPrice = 0
+  }
+  else {
+    toppingsPrice = 0.5 * (toppingsArr.length - 4)
+  }
+  //this is for output toppings on the screen:
+  if (toppingsArr.length === 0) {
+    document.querySelector('#toppingName1').textContent = 'none'
+    document.querySelector('#toppingPrice1').textContent = '0.00'
+  } else {
+    for (i = 1; i <= toppingsQuantity; i++) {
+      if (i <= toppingsArr.length) {
+        document.querySelector(`#toppingName${i}`).textContent = `${toppingsArr[i - 1]}` //output of topping's name
+        let toppingPrice = document.querySelector(`#toppingPrice${i}`) //output of topping's price
+        if (i <= 4) {
+          toppingPrice.textContent = '0.00' //output of topping's price
+        } else {
+          toppingPrice.textContent = '0.50' //output of topping's price
+        }
+      } else {
+        document.querySelector(`#toppingName${i}`).textContent = ''
+        document.querySelector(`#toppingPrice${i}`).textContent = ''
+      }
+    }
+  }
+
 }
 
 // WHERE TO EAT BLOCK
