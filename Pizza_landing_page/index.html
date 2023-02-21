@@ -29,23 +29,25 @@
           <div id="left">
             <div id="customer">
               <h2>Customer:</h2>
-              <input id="name_input" type="text" placeholder="Enter your name" />
+              <input id="name_input" type="text" placeholder="Enter your name" onchange="customersName(this.value)"/>
             </div>
             <div id="pizzaSize">
               <h2>Select pizza's size</h2>
               <div class="buttons">
-                <input type="radio" name="size" id="for2" checked>
-                <label for="for2">for 2, the price is 7.50€</label>
                 <div>
-                  <input type="radio" name="size" id="for4">
+                  <input type="radio" name="radiobutton" id="for 2" value="7.50" onclick="pizzaSize(this.id, this.value)" checked>
+                  <label for="for2">for 2, the price is 7.50€</label>
+                </div>
+                <div>
+                  <input type="radio" name="radiobutton" id="for 4" value="10.50" onclick="pizzaSize(this.id, this.value)">
                   <label for="for4">for 4, the price is 10.50€</label>
                 </div>
                 <div>
-                  <input type="radio" name="size" id="for6">
+                  <input type="radio" name="radiobutton" id="for 6" value="12.50" onclick="pizzaSize(this.id, this.value)">
                   <label for="for6">for 6, the price is 12.50€</label>
                 </div>
                 <div>
-                  <input type="radio" name="size" id="for8">
+                  <input type="radio" name="radiobutton" id="for 8" value="15.50" onclick="pizzaSize(this.id, this.value)">
                   <label for="for8">for 8, the price is 15.50€</label>
                 </div>
               </div>
@@ -85,10 +87,10 @@
             </div>
             <div id="whereToEat">
               <h2>Where you will eat</h2>
-              <select id="selectWTE">
-                <option value="in">HERE</option>
-                <option value="outside">OUTSIDE</option>
-                <option value="home">Home delivery (+5€)</option>
+              <select id="selectWTE" onchange="whereToEat(this.value)">
+                <option value="Eat here">HERE</option>
+                <option value="Eat outside">OUTSIDE</option>
+                <option value="Home delivery">Home delivery (+5€)</option>
               </select>
             </div>
           </div>
@@ -96,7 +98,7 @@
           <div id="right">
             <div id="rightBox">
               <div id="rightBoxUpperPart">
-                <div id="rightTitle"><b>SAMANTA'S ORDER</b></div>
+                <div id="rightTitle"><b>ORDER</b></div>
                 <div id="rightPizzaSize">
                   <div id="rightPizzaSizeName">Size: for 2</div>
                   <div id="rightPizzaSizePrice">7.50</div>
@@ -128,5 +130,6 @@
         </div>
       </form>
     </div>
+    <script src="main.js"></script>
   </body>
 </html>
