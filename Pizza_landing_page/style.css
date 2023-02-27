@@ -17,6 +17,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 2200px;
 }
 
 #logoImg {
@@ -109,7 +110,7 @@ select {
   border-top-style:dashed;
   border-bottom-style:dashed;
   border-radius: 0px;
-  background-color: rgb(161, 167, 173);
+  background-color: whitesmoke;
   color: rgb(73, 72, 72);
   font-family: 'Cutive Mono', monospace;
   padding: 1rem;
@@ -157,6 +158,17 @@ select {
   text-align: end;
 }
 
+#barcode {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+#barcodeImg {
+  width: 10rem;
+  height: 3rem;
+}
+
 #afterPrice {
   display: flex;
   justify-content: space-between;
@@ -172,30 +184,21 @@ input::placeholder {
 @media (max-width: 620px) {
   
   ul {
-    display: inline-block;
-    font-size: 1.2rem;
-    color: whitesmoke;
-    margin-right: 2rem;
+    margin-right: 1rem;
   }
 
   #order {
-    height: 75vh;
     display: flex;
     flex-direction: column;
-    justify-content:flex-start;
-    align-items:center;
-    background-image: url('background.jpg');
-    background-repeat: no-repeat;
-    background-position:top right;
-    background-size: cover;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   #left {
-    width: 48vw;
-    display:flex;
-    flex-direction: column;
-    align-items:flex-end;
+    width: 100vw;
     margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
   }
 
   #customer {
@@ -207,25 +210,15 @@ input::placeholder {
   #verticalLine {
     width: 15rem;
     height: 1px;
-    border: 1px;
-    border-style: solid;
-    border-color: aliceblue;
-    margin-top: 2 rem;
+  }
+
+  #right {
+    width: 100vw;
+    display: flex;
+    align-items: center;
   }
 
   #rightBox {
-    width: 15rem;
-    height: 27rem;
-    border-top-style:dashed;
-    border-bottom-style:dashed;
-    border-radius: 0px;
-    background-color: rgb(161, 167, 173);
-    color: rgb(73, 72, 72);
-    font-family: 'Cutive Mono', monospace;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     margin-top: 2rem;
   }
-
 }
