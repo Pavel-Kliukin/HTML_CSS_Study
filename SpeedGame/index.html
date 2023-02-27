@@ -19,8 +19,18 @@
       <button class="circles" id="c3">3</button>
       <button class="circles" id="c4">4</button>
     </div>
-    <div id="start_button_block">
-      <button id="start_button">Start game</button>
+    <div id="start_stop_button_block">
+      <button id="start_button" class="activeButton" onclick="startGame()">Start game</button>
+      <button id="stop_button" class="notActiveButton" onclick="stopGame()">STOP</button>
+    </div>
+    <div class="overlay">
+      <div class="modal">
+        <h2>Game over</h2>
+        <p>
+          Try one more time
+        </p>
+        <button id="closeButton" class="btn">x</button>
+      </div>
     </div>
     <script src="main.js"></script>
   </body>

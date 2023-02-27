@@ -37,14 +37,70 @@ h1 {
   margin: 3vw;
 }
 
-#start_button_block {
+.highlighted {
+  background-color: aqua;
+  border: 3px;
+  border-style: dashed;
+}
+
+#start_stop_button_block {
   display: flex;
   justify-content: center;
 }
 
-#start_button {
+.activeButton {
   height: 3rem;
   width: 10rem;
   border-radius: 5px;
   font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notActiveButton {
+  display:none;
+}
+
+/* overlay modal */
+
+.overlay {
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+  display: none;
+}
+
+.overlay.visible {
+  display: flex;
+}
+
+.modal {
+  background-color: white;
+  opacity: none;
+  color: #333;
+  height: 15vh;
+  width: 15vw;
+  padding: 2rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative /*so the button could position itself*/;
+}
+
+.modal button {
+  border: none;
+  border-radius: 5px;
+  box-shadow: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
