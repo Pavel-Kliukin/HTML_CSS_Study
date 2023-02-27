@@ -76,16 +76,33 @@ function whereToEat(place) {
 }
 
 //TOTAL PRICE BLOCK
-let totalPriceChange = document.querySelectorAll('#left');
+let totalPriceChange = document.querySelectorAll('#left')
 
 //document.querySelectorAll doesn't have addEventListener method. So we have to make for loop to listen all possible events
 // When any event comes, we changes the Total amount
 for (let i = 0; i < totalPriceChange.length; i++) {
-  totalPriceChange[i].addEventListener('change', priceChange);
+  totalPriceChange[i].addEventListener('change', priceChange)
 }
 
-let totalPrice = document.getElementById('totalPrice');
+let totalPrice = document.getElementById('totalPrice')
 
 function priceChange() {
-  totalPrice.textContent = (pizzaPrice + toppingsPrice + whereToEatPrice).toFixed(2);
+  totalPrice.textContent = (pizzaPrice + toppingsPrice + whereToEatPrice).toFixed(2)
 }
+
+//Date and time block
+date = document.querySelector('#date')
+time = document.querySelector('#time')
+const today = new Date()
+const yyyy = today.getFullYear()
+let mm = today.getMonth() + 1 // Months start at 0!
+let dd = today.getDate()
+let hh = today.getHours()
+let min = today.getMinutes()
+
+if (dd < 10) dd = '0' + dd;
+if (mm < 10) mm = '0' + mm;
+
+const formattedToday = dd + '.' + mm + '.' + yyyy;
+date.textContent = formattedToday
+time.textContent = hh + ':' + min

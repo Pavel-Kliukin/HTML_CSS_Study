@@ -105,7 +105,7 @@ select {
 
 #rightBox {
   width: 15rem;
-  height: 22rem;
+  height: 27rem;
   border-top-style:dashed;
   border-bottom-style:dashed;
   border-radius: 0px;
@@ -121,6 +121,11 @@ select {
 #rightTitle {
   margin-bottom: 1rem;
   text-align: center;
+}
+
+#eur {
+  text-align: end;
+  margin-bottom: 0.5rem;
 }
 
 .toppings, #rightPizzaSize, #rightWTE {
@@ -152,8 +157,75 @@ select {
   text-align: end;
 }
 
+#afterPrice {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
 input::placeholder {
   opacity: 0.5;
   color: grey;
 }
 
+
+@media (max-width: 620px) {
+  
+  ul {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    margin-right: 2rem;
+  }
+
+  #order {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:center;
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-position:top right;
+    background-size: cover;
+  }
+
+  #left {
+    width: 48vw;
+    display:flex;
+    flex-direction: column;
+    align-items:flex-end;
+    margin-bottom: 2rem;
+  }
+
+  #customer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #verticalLine {
+    width: 15rem;
+    height: 1px;
+    border: 1px;
+    border-style: solid;
+    border-color: aliceblue;
+    margin-top: 2 rem;
+  }
+
+  #rightBox {
+    width: 15rem;
+    height: 27rem;
+    border-top-style:dashed;
+    border-bottom-style:dashed;
+    border-radius: 0px;
+    background-color: rgb(161, 167, 173);
+    color: rgb(73, 72, 72);
+    font-family: 'Cutive Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+
+}
