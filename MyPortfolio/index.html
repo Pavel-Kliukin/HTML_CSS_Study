@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>My portfolio</title>
   </head>
   <body>
@@ -23,7 +24,7 @@
       <section id="upper_part">
         <h2>Welcome to my portfolio</h2>
       </section>
-      <section id="Projects">
+      <section id="projects">
         <h3>Projects</h3>
         <section id="myProjects">
           <article class="project">
@@ -51,14 +52,7 @@
       <section id="aboutMe">
         <h3>About me</h3>
         <!-- <img src="2.jpg" id="aboutMeImage" alt="About me" width="350" height="200"> -->
-        <video
-          id="aboutMeImage"
-          width="350"
-          height="190"
-          autoplay
-          controls
-          loop
-        >
+        <video id="aboutMeImage" width="350" height="190" autoplay controls loop>
           <source src="video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -74,46 +68,73 @@
           including versions of Lorem Ipsum.
         </p>
       </section>
-      <section id="Skills">
+      <section id="skills">
         <h3>Skills</h3>
-        <!-- <img src="skills.jpg" id="skillsImage" alt="About me" width="350" height="200"> -->
-        <video id="skillsImage" width="350" height="190" autoplay controls loop>
-          <source src="skills.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <p id="skillsText">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </p>
+        <div id="skillsBox">
+          <div id="skillsTextVideo">
+            <!-- <img src="skills.jpg" id="skillsImage" alt="About me" width="350" height="200"> -->
+            <video id="skillsImage" width="350" height="190" autoplay controls loop>
+              <source src="skills.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <p id="skillsText">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text ever
+              since the 1500s, when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book. It has survived not only
+              five centuries, but also the leap into electronic typesetting,
+              remaining essentially unchanged. It was popularised in the 1960s with
+              the release of Letraset sheets containing Lorem Ipsum passages, and
+              more recently with desktop publishing software like Aldus PageMaker
+              including versions of Lorem Ipsum.
+            </p>
+          </div>
+          <div id="iconsBlock">
+            <box class="icon">
+              <span class="material-symbols-outlined">
+                hourglass_top
+                </span>
+                <p>skills will be here</p>
+            </box>
+            <box class="icon">
+              <span class="material-symbols-outlined">
+                hourglass_top
+                </span>
+                <p>skills will be here</p>
+            </box>
+            <box class="icon">
+              <span class="material-symbols-outlined">
+                hourglass_top
+                </span>
+                <p>skills will be here</p>
+            </box>
+            <box class="icon">
+              <span class="material-symbols-outlined">
+                hourglass_top
+                </span>
+                <p>skills will be here</p>
+            </box>
+          </div>
+        </div>
       </section>
-      <form id="contactMe">
-        <h3 id="contactMeTitle">Contact me</h3>
-
-        <div>
-          <label for="yourName">Your name</label>
-          <input type="text" id="yourName" />
+      <form>
+        <div id="contactMe">
+          <h3 id="contactMeTitle">Contact me</h3>
+          <div class="contacts">
+            <label for="yourName">Your name</label>
+            <input type="text" id="yourName" />
+          </div>
+          <div class="contacts">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" />
+          </div>
+          <div class="contacts">
+            <label for="message">Message to me</label>
+            <input type="text" id="message" />
+          </div>
+          <button id="send_button" onclick="">SEND MESSAGE</button>
+          <p id="copyrightText">Copyright © My Website 2023</p>
         </div>
-
-        <div>
-          <label for="email">Your Email</label>
-          <input type="email" id="email" />
-        </div>
-
-        <div>
-          <label for="message">Message to me</label>
-          <input type="text" id="message" />
-        </div>
-
-        <button id="send_button" onclick="">SEND MESSAGE</button>
-
-        <p id="copyrightText">Copyright © My Website 2023</p>
       </form>
     </main>
   </body>
