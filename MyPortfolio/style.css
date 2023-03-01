@@ -80,7 +80,7 @@ img {
 
 .seeMore {
   margin-top: 0.5rem;
-  color: orange;
+  color: rgb(255, 127, 80);
 }
 
 #aboutMe {
@@ -93,7 +93,7 @@ img {
   float: left;
 }
 
-#skillsBox {
+#skillsBlock {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,13 +104,13 @@ img {
   float: right;
 }
 
-#iconsBlock {
+#skillsBoxes {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.icon {
+.skillsBox {
   width: 200px;
   height: 200px;
   border: 1px;
@@ -126,6 +126,7 @@ img {
 }
 
 .material-symbols-outlined {
+  margin-bottom: 1rem;
   font-variation-settings:
   'FILL' 1,
   'wght' 400,
@@ -133,12 +134,74 @@ img {
   'opsz' 20
 }
 
+/*** progress styling ***/
 progress {
-  width: 60%;
-  height: 10%;
-  background-color: black;
-  color: white;
+  opacity: 0;
 }
+
+.progress-container {
+  position: relative;
+  display: inline-block;
+  background: #333;
+  width: 100%;
+  height: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.progress-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-width: 1px;
+  height: 100%;
+  width: 0;
+  background: rgb(255, 127, 80);
+}
+
+.progress-element--python .progress-container::before {
+  animation: progress-javascript 1s ease-in forwards;
+}
+
+.progress-element--javascript .progress-container::before {
+  animation: progress-javascript 1s ease-in forwards;
+}
+
+.progress-element--html .progress-container::before {
+  animation: progress-html 1s ease-in forwards;
+}
+
+.progress-element--css .progress-container::before {
+  animation: progress-css 1s ease-in forwards;
+}
+
+@keyframes progress-python {
+  to {
+    width: 65%;
+  }
+}
+
+@keyframes progress-javascript {
+  to {
+    width: 50%;
+  }
+}
+
+@keyframes progress-html {
+  to {
+    width: 85%;
+  }
+}
+
+@keyframes progress-css {
+  to {
+    width: 35%;
+  }
+}
+
+/**********************/
 
 #aboutMeText,
 #skillsText {
