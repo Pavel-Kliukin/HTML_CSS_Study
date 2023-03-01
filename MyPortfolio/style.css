@@ -133,6 +133,13 @@ img {
   'opsz' 20
 }
 
+progress {
+  width: 60%;
+  height: 10%;
+  background-color: black;
+  color: white;
+}
+
 #aboutMeText,
 #skillsText {
   padding: 0 3rem 1.5rem;
@@ -148,7 +155,7 @@ form {
 }
 
 #contactMe {
-  width: 700px; 
+  width: 550px; 
 }
 
 .contacts {
@@ -194,4 +201,9 @@ button {
 @media (max-width: 530px) {
   #yourName, #email, #message {
   width: 250px;
+}
+
+#contactMe {
+  width: 370px; 
+}
 }
