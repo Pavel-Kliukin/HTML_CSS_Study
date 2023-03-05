@@ -6,7 +6,8 @@
 
 body {
   background-color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Noto Sans', sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 header {
@@ -125,14 +126,11 @@ img {
   align-items: center;
 }
 
-.material-symbols-outlined {
+i {
+  font-size: 4rem;
   margin-bottom: 1rem;
-  font-variation-settings:
-  'FILL' 1,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 20
 }
+
 
 /*** progress styling ***/
 progress {
@@ -162,7 +160,7 @@ progress {
 }
 
 .progress-element--python .progress-container::before {
-  animation: progress-javascript 1s ease-in forwards;
+  animation: progress-python 1s ease-in forwards;
 }
 
 .progress-element--javascript .progress-container::before {
@@ -185,7 +183,7 @@ progress {
 
 @keyframes progress-javascript {
   to {
-    width: 50%;
+    width: 60%;
   }
 }
 
@@ -197,7 +195,7 @@ progress {
 
 @keyframes progress-css {
   to {
-    width: 35%;
+    width: 40%;
   }
 }
 
