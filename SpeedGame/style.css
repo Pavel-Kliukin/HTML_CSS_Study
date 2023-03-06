@@ -5,7 +5,7 @@
 }
 
 body {
-  background: linear-gradient(to left bottom, #efcf96, #f2b10f);
+  background: linear-gradient(to left bottom, #efcf96, #a17a18);
   background-repeat: no-repeat;
   height: 100vh;
 }
@@ -48,7 +48,7 @@ h1 {
   justify-content: center;
 }
 
-.activeButton {
+button {
   height: 3rem;
   width: 10rem;
   border-radius: 5px;
@@ -58,7 +58,7 @@ h1 {
   align-items: center;
 }
 
-.notActiveButton {
+.hidenButton {
   display:none;
 }
 
@@ -73,7 +73,7 @@ h1 {
   width: 100vw;
   justify-content: center;
   align-items: center;
-  opacity: 0.8;
+  opacity: 0.9;
   display: none;
 }
 
@@ -83,24 +83,44 @@ h1 {
 
 .modal {
   background-color: white;
-  opacity: none;
+  opacity: 1;
   color: #333;
-  height: 15vh;
-  width: 15vw;
+  height: 20vh;
+  width: 40vw;
   padding: 2rem;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   position: relative /*so the button could position itself*/;
 }
 
-.modal button {
-  border: none;
+.btn {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-width: 1px;
   border-radius: 5px;
   box-shadow: none;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+@media (max-width: 576px) {
+  .circles {
+    height: 30vw;
+    width: 30vw;
+  }
+
+  #circles_block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem;
+  }
+
+  .modal {
+    width: 80vw;
+  }
 }
