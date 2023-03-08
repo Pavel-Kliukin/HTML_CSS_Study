@@ -7,7 +7,6 @@
 body {
   background-color: white;
   font-family: 'Noto Sans', sans-serif;
-  /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 header {
@@ -18,8 +17,16 @@ header {
   align-items: center;
 }
 
+main header {
+  max-width: 1200px;
+}
+
 h1 {
   margin-left: 2vw;
+}
+
+h3 {
+  padding: 2rem 0 1rem 3rem;
 }
 
 nav ul li {
@@ -31,6 +38,12 @@ nav ul li a {
   color: white;
 }
 
+img {
+  width: 350px;
+  height: 200px;
+}
+
+/*** HERO BANNER ***/
 #upper_part {
   height: 75vh;
   background: url("1.jpg") no-repeat top center/cover;
@@ -42,15 +55,7 @@ nav ul li a {
   text-align: center;
 }
 
-h3 {
-  padding: 2rem 0 1rem 3rem;
-}
-
-img {
-  width: 350px;
-  height: 200px;
-}
-
+/*** MY PROJECTS ***/
 #myProjects {
   padding: 2rem 0 1.5rem 3rem;
   display: flex;
@@ -84,6 +89,7 @@ img {
   color: rgb(255, 127, 80);
 }
 
+/*** ABOUT ME ***/
 #aboutMe {
   background-color: rgb(236, 237, 238);
   display: inline-block;
@@ -132,7 +138,7 @@ i {
 }
 
 
-/*** progress styling ***/
+/*** progress-elements styling ***/
 progress {
   opacity: 0;
 }
@@ -199,13 +205,14 @@ progress {
   }
 }
 
-/**********************/
+/********** end of progress styling ************/
 
 #aboutMeText,
 #skillsText {
   padding: 0 3rem 1.5rem;
 }
 
+/*** FOOTER ***/
 form {
   background-color: #333;
   color: white;
