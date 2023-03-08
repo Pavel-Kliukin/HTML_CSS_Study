@@ -9,16 +9,17 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
-header {
-  background-color: #333;
-  color: white;
+section {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
 }
 
-main header {
+.insideSection {
   max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 1.5rem;
 }
 
 h1 {
@@ -26,7 +27,7 @@ h1 {
 }
 
 h3 {
-  padding: 2rem 0 1rem 3rem;
+  margin: 0 0 1.5rem 0;
 }
 
 nav ul li {
@@ -39,8 +40,21 @@ nav ul li a {
 }
 
 img {
-  width: 350px;
-  height: 200px;
+  width: 305px;
+  height: 180px;
+}
+
+/*** HEADER ***/
+header {
+  background-color: #333;
+  color: white
+}
+
+#headersSection {
+  max-width: 1600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*** HERO BANNER ***/
@@ -56,8 +70,13 @@ img {
 }
 
 /*** MY PROJECTS ***/
+#projects {
+  display: flex;
+  justify-content: space-around;
+}
+
 #myProjects {
-  padding: 2rem 0 1.5rem 3rem;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -69,7 +88,7 @@ img {
   border-style: solid;
   border-radius: 3px;
   padding: 1.5rem;
-  margin: 1rem 0;
+  margin: 0.5rem 1rem;
 }
 
 .projectName {
@@ -81,6 +100,7 @@ img {
   margin-top: 0.5rem;
   font-style: oblique;
   color: grey;
+  display: flex;
 }
 
 
@@ -92,23 +112,23 @@ img {
 /*** ABOUT ME ***/
 #aboutMe {
   background-color: rgb(236, 237, 238);
-  display: inline-block;
 }
 
-#aboutMeImage {
-  padding: 0 1.5rem 1.5rem 3rem;
+#aboutMeVideo {
   float: left;
+  margin: 0 1rem 1rem 0;
 }
 
+/*** SKILLS ***/
 #skillsBlock {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#skillsImage {
-  padding: 0 3rem 1.5rem 1.5rem;
+#skillsVideo {
   float: right;
+  margin: 0 0 1rem 1rem;
 }
 
 #skillsBoxes {
@@ -204,13 +224,7 @@ progress {
     width: 40%;
   }
 }
-
 /********** end of progress styling ************/
-
-#aboutMeText,
-#skillsText {
-  padding: 0 3rem 1.5rem;
-}
 
 /*** FOOTER ***/
 form {

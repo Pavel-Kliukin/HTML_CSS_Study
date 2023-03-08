@@ -18,80 +18,62 @@
     <!-- Skills icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <!-- end of skills icons -->
-          
-
     <title>My portfolio</title>
   </head>
   <body>
     <header>
-      <h1>Pavel Kliukin</h1>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
+      <div id="headersSection">
+        <h1>Pavel Kliukin</h1>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
       <section id="upper_part">
         <h2>Welcome to my portfolio</h2>
       </section>
       <section id="projects">
-        <h3>Projects</h3>
-        <div id="myProjects">
-          <div class="project">
-            <img src="project1.jpg" alt="Project 1">
-            <p class="projectName">ChatGPT</p>
-            <p class="projectText">
-              How I made ChatGPT and then sold it to Google
-            </p>
-            <p class="seeMore">See more</p>
-          </div>
-          <div class="project">
-            <img src="project2.jpg" alt="Project 2">
-            <p class="projectName">Facebook idea</p>
-            <p class="projectText">And how Mark Zuckerberg stole it from me</p>
-            <p class="seeMore">See more</p>
-          </div>
-          <div class="project">
-            <img src="project3.jpg" alt="Project 3">
-            <p class="projectName">Google maps</p>
-            <p class="projectText">How long did it take me to draw it</p>
-            <p class="seeMore">See more</p>
+        <div class="insideSection">
+          <h3>Projects</h3>
+          <div id="myProjects">
+            <div class="project">
+              <img src="project1.jpg" alt="Project 1">
+              <p class="projectName">ChatGPT</p>
+              <p class="projectText">
+                How I made ChatGPT and sold it to Google
+              </p>
+              <p class="seeMore">See more</p>
+            </div>
+            <div class="project">
+              <img src="project2.jpg" alt="Project 2">
+              <p class="projectName">Facebook idea</p>
+              <p class="projectText">And how Mark Zuckerberg stole it from me</p>
+              <p class="seeMore">See more</p>
+            </div>
+            <div class="project">
+              <img src="project3.jpg" alt="Project 3">
+              <p class="projectName">Google maps</p>
+              <p class="projectText">How long did it take me to draw it</p>
+              <p class="seeMore">See more</p>
+            </div>
           </div>
         </div>
       </section>
       <section id="aboutMe">
-        <h3>About me</h3>
-        <!-- <img src="2.jpg" id="aboutMeImage" alt="About me" width="350" height="200"> -->
-        <video id="aboutMeImage" width="350" height="190" autoplay controls loop>
-          <source src="video.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p id="aboutMeText">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </p>
-      </section>
-      <section id="skillsSection">
-        <h3>Skills</h3>
-        <div id="skillsBlock">
-          <div id="skillsTextVideo">
-            <!-- <img src="skills.jpg" id="skillsImage" alt="About me" width="350" height="200"> -->
-            <video id="skillsImage" width="350" height="190" autoplay controls loop>
-              <source src="skills.mp4" type="video/mp4">
+        <div class="insideSection">
+          <h3>About me</h3>
+          <div id="aboutMeVideoAndText">
+            <video id="aboutMeVideo" width="340" height="190" autoplay controls loop muted>
+              <source src="video.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
-            <p id="skillsText">
+            <p id="aboutMeText">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text ever
               since the 1500s, when an unknown printer took a galley of type and
@@ -103,40 +85,64 @@
               including versions of Lorem Ipsum.
             </p>
           </div>
-          <div id="skillsBoxes">
-            <div class="skillsBox">
-              <i class="devicon-python-plain"></i>
-              <p>Python</p>
-              <div class="progress-element progress-element--python">
-                <div class="progress-container">
-                  <progress value="90" max="100"></progress>
+        </div>
+      </section>
+      <section id="skillsSection">
+        <div class="insideSection">
+          <h3>Skills</h3>
+          <div id="skillsBlock">
+            <div id="skillsTextVideo">
+              <video id="skillsVideo" width="340" height="190" autoplay controls loop muted>
+                <source src="skills.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <p id="skillsText">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text ever
+                since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only
+                five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with
+                the release of Letraset sheets containing Lorem Ipsum passages, and
+                more recently with desktop publishing software like Aldus PageMaker
+                including versions of Lorem Ipsum.
+              </p>
+            </div>
+            <div id="skillsBoxes">
+              <div class="skillsBox">
+                <i class="devicon-python-plain"></i>
+                <p>Python</p>
+                <div class="progress-element progress-element--python">
+                  <div class="progress-container">
+                    <progress value="90" max="100"></progress>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="skillsBox">
-              <i class="devicon-javascript-plain"></i>
-              <p>Java Script</p>
-              <div class="progress-element progress-element--javascript">
-                <div class="progress-container">
-                  <progress value="50" max="100"></progress>
+              <div class="skillsBox">
+                <i class="devicon-javascript-plain"></i>
+                <p>Java Script</p>
+                <div class="progress-element progress-element--javascript">
+                  <div class="progress-container">
+                    <progress value="50" max="100"></progress>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="skillsBox">
-              <i class="devicon-html5-plain"></i>
-              <p>HTML</p>
-              <div class="progress-element progress-element--html">
-                <div class="progress-container">
-                  <progress value="60" max="100"></progress>
+              <div class="skillsBox">
+                <i class="devicon-html5-plain"></i>
+                <p>HTML</p>
+                <div class="progress-element progress-element--html">
+                  <div class="progress-container">
+                    <progress value="60" max="100"></progress>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="skillsBox">
-              <i class="devicon-css3-plain"></i>
-              <p>CSS</p>
-              <div class="progress-element progress-element--css">
-                <div class="progress-container">
-                  <progress value="50" max="100"></progress>
+              <div class="skillsBox">
+                <i class="devicon-css3-plain"></i>
+                <p>CSS</p>
+                <div class="progress-element progress-element--css">
+                  <div class="progress-container">
+                    <progress value="50" max="100"></progress>
+                  </div>
                 </div>
               </div>
             </div>
