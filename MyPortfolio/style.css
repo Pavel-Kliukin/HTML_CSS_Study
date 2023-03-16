@@ -373,3 +373,50 @@ button {
     width: 250px;
   }
 }
+
+/* GALLERY.HTML */
+#toMainPage {
+  text-decoration: none;
+  color: white;
+}
+
+.gallery {
+  /* width: 1200px;
+  height: 800px; */
+  display: grid;
+  grid-template-areas: 
+  " a a a b"
+  " c e e b"
+  " d e e b"
+  " f f f f";
+}
+
+.a {
+  grid-area: a;
+  background-color: green;
+}
+
+.b {
+  grid-area: b;
+  background-color: rgb(52, 41, 98);
+}
+
+.c {
+  grid-area: c;
+  background-color: rgb(80, 163, 184);
+}
+
+.d {
+  grid-area: d;
+  background-color: rgb(127, 47, 99);
+}
+
+.e {
+  grid-area: e;
+  background-color: rgb(134, 163, 168);
+}
+
+.f {
+  grid-area: f;
+  background-color: rgb(147, 80, 80);
+}
