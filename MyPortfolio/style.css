@@ -12,6 +12,8 @@ body {
 section {
   display: flex;
   justify-content: center;
+    /* It's for matching with header when section scrolls to the top */
+    scroll-margin-top: 3.8rem;
 }
 
 .insideSection {
@@ -44,10 +46,20 @@ img {
   height: 180px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /*** HEADER ***/
 header {
   background-color: #333;
-  color: white
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+.headerOnScroll {
+  opacity: 80%;
 }
 
 #headersSection {
@@ -57,10 +69,18 @@ header {
   align-items: center;
 }
 
+/* "Hamburger" for mobile menu */
+.mobile {
+  background: none;
+  border: none;
+  box-shadow: none;
+  display: none;
+}
+
 /*** HERO BANNER ***/
 #upper_part {
   height: 75vh;
-  background: url("1.jpg") no-repeat top center/cover;
+  background: url("/assets/1.jpg") no-repeat top center/cover;
   color: black;
   display: flex;
   font-size: 30px;
@@ -150,6 +170,10 @@ header {
   flex-direction: column;
   justify-content:center;
   align-items: center;
+}
+
+.skillsBox:nth-child(even) {
+  background-color: rgb(207, 208, 210);
 }
 
 i {
@@ -280,12 +304,72 @@ button {
   padding: 1.5rem;
 }
 
-@media (max-width: 530px) {
-  #yourName, #email, #message {
-  width: 250px;
+#backToTop {
+  /* to fix a button at the right bottom position */
+  position: fixed;
+  height: 45px;
+  width: 45px;
+  font-size: 2rem;
+  background-color: rgb(207, 208, 210);
+  bottom: 2rem;
+  right: 2rem;
+  text-align: center;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  padding-bottom: 0.5rem;
+  display: none;
 }
 
-#contactMe {
-  width: 370px; 
-}
+@media (max-width: 530px) { 
+
+  /* for mobile menu */
+  nav ul {
+    display: none;
+  }
+  .mobile {
+    max-width: 3rem;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-right: 1rem;
+  }
+  ul.responsive {
+    display: block;
+    background-color: white;
+    opacity: 100%;
+    position: absolute;
+    left: 0;
+    top: 2.8rem;
+    width: 100%;
+  }
+  /* end of mobile menu */
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  ul.responsive li a{
+    display: block;
+    padding: 0.5rem;
+    color: #333;
+  }
+
+  .project {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+  
+  #skillsVideo {
+    float: left;
+    margin: 0 1rem 1rem 0;
+  }
+  
+  #contactMe {
+    width: 370px; 
+  }
+
+  #yourName, #email, #message {
+    width: 250px;
+  }
 }
