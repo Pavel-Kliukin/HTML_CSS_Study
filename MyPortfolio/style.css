@@ -1,3 +1,11 @@
+:root {
+  --color-orange: rgb(255, 127, 80);
+  --bg-color-white: white;
+  --text-color-white: white;
+  --lighter-grey: rgb(236, 237, 238);
+  --darker-grey: rgb(207, 208, 210);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +13,7 @@
 }
 
 body {
-  background-color: white;
+  background-color: var(--bg-color-white);
   font-family: 'Noto Sans', sans-serif;
 }
 
@@ -38,12 +46,12 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
+  color: var(--text-color-white);
 }
 
 img {
-  width: 305px;
-  height: 180px;
+  width: 300px;
+  height: 200px;
 }
 
 html {
@@ -53,7 +61,7 @@ html {
 /*** HEADER ***/
 header {
   background-color: #333;
-  color: white;
+  color: var(--text-color-white);
   position: sticky;
   top: 0;
 }
@@ -112,7 +120,7 @@ header {
 #projects {
   display: flex;
   justify-content: space-around;
-  background-color: white;
+  background-color: var(--bg-color-white);
 }
 
 #myProjects {
@@ -160,12 +168,12 @@ header {
 
 .seeMorelink {
   text-decoration: none;
-  color: rgb(255, 127, 80);
+  color: var(--color-orange);
 }
 
 /*** ABOUT ME ***/
 #aboutMe {
-  background-color: rgb(236, 237, 238);
+  background-color: var(--lighter-grey);
 }
 
 #aboutMeVideo {
@@ -175,7 +183,7 @@ header {
 
 /*** SKILLS ***/
 #skillsSection {
-  background-color: white;
+  background-color: var(--bg-color-white);
 }
 
 #skillsBlock {
@@ -202,7 +210,7 @@ header {
   border-radius: 3px;
   border-color: rgb(212, 210, 210);
   border-style: solid;
-  background-color: rgb(236, 237, 238);
+  background-color: var(--lighter-grey);
   margin: 2rem;
   display: flex;
   flex-direction: column;
@@ -211,7 +219,7 @@ header {
 }
 
 .skillsBox:nth-child(even) {
-  background-color: rgb(207, 208, 210);
+  background-color: var(--darker-grey);
 }
 
 i {
@@ -236,7 +244,7 @@ progress {
   margin-top: 1rem;
 }
 
-.progress-container::before {
+.progress-container::after {
   content: "";
   position: absolute;
   top: 0;
@@ -244,22 +252,22 @@ progress {
   border-width: 1px;
   height: 100%;
   width: 0;
-  background: rgb(255, 127, 80);
+  background: var(--color-orange);
 }
 
-.progress-element--python .progress-container::before {
+.progress-element--python.active .progress-container::after {
   animation: progress-python 1s ease-in forwards;
 }
 
-.progress-element--javascript .progress-container::before {
+.progress-element--javascript.active .progress-container::after {
   animation: progress-javascript 1s ease-in forwards;
 }
 
-.progress-element--html .progress-container::before {
+.progress-element--html.active .progress-container::after {
   animation: progress-html 1s ease-in forwards;
 }
 
-.progress-element--css .progress-container::before {
+.progress-element--css.active .progress-container::after {
   animation: progress-css 1s ease-in forwards;
 }
 
@@ -291,7 +299,7 @@ progress {
 /*** FOOTER ***/
 form {
   background-color: #333;
-  color: white;
+  color: var(--text-color-white);
   display: flex;
   justify-content: center;
   text-align: center;
@@ -331,11 +339,11 @@ form {
 button {
   height: 45px;
   width: 235px;
-  background-color: rgb(255, 127, 80);
+  background-color: var(--color-orange);
   font-size: 15px;
   border: none;
   border-radius: 5px;
-  color: rgb(255, 255, 255);
+  color: var(--text-color-white);
 }
 
 #copyrightText {
@@ -348,7 +356,7 @@ button {
   height: 45px;
   width: 45px;
   font-size: 2rem;
-  background-color: rgb(207, 208, 210);
+  background-color: var(--darker-grey);
   bottom: 2rem;
   right: 2rem;
   text-align: center;
@@ -377,7 +385,7 @@ button {
 }
 #toMainPage {
   text-decoration: none;
-  color: white;
+  color: var(--text-color-white);
 }
 
 #galleryWraper {
@@ -494,7 +502,7 @@ button {
   }
   ul.responsive {
     display: block;
-    background-color: white;
+    background-color: var(--bg-color-white);
     opacity: 100%;
     position: absolute;
     left: 0;

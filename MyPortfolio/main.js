@@ -41,3 +41,48 @@ const mobMenu = () => {
 }
 hamburgerMenuButton.addEventListener('click', mobMenu);
 // ---------------------------------------
+
+
+//Progress-alements onscroll activating
+
+// receiving options as an object
+// if the user doesn't pass any options, the default will be `{}`
+function scrollTrigger (selector, options = {}) {
+  let els = document.querySelectorAll(selector)
+  els = Array.from(els)
+  els.forEach(el => {
+    // Passing the options object to the addObserver function
+    addObserver(el, options)
+  })
+}
+
+// Receiving options passed from the scrollTrigger function
+function addObserver (el, options) {
+  if (!('IntersectionObserver' in window)) {
+    if (options.cb) {
+      // If we've passed a callback function, we'll call it
+      options.cb(el)
+    } else {
+      // If we haven't, we'll just add the active class
+      entry.target.classList.add('active')
+    }
+    return
+  }
+  let observer = new IntersectionObserver((entries, observer) => { //this takes a callback function which receives two arguments: the elemts list and the observer instance
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (options.cb) {
+          options.cb(el)
+        } else {
+          entry.target.classList.add('active')
+        }
+        observer.unobserve(entry.target)
+      }
+    })
+  }, options) // Passing the options object to the observer
+  observer.observe(el)
+}
+scrollTrigger('.progress-element', {
+  rootMargin: '-200px',
+})
+// ---------------------------------------
