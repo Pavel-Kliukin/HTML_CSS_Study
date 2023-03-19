@@ -89,7 +89,7 @@ header {
 /*** HERO BANNER ***/
 #upper_part {
   height: 75vh;
-  background: url("/assets/1.jpg") no-repeat top center/cover;
+  background: url("assets/1.jpg") no-repeat top center/cover;
   color: black;
   display: flex;
   font-size: 30px;
