@@ -83,6 +83,6 @@ function addObserver (el, options) {
   observer.observe(el)
 }
 scrollTrigger('.progress-element', {
-  rootMargin: '-200px',
+  rootMargin: '-10%',
 })
 // ---------------------------------------
