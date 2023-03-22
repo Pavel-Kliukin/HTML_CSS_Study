@@ -392,7 +392,6 @@ button {
   font-family: 'Tilt Neon', cursive;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   margin: 2rem 0;
 }
 

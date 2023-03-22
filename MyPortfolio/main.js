@@ -7,7 +7,6 @@ const menuItems = document.querySelectorAll('nav ul li a')
 // This code was taken from w3schools.com/howto/  and it make the button disapear when the user is on top of the site
 // Also I added the feature with changing the header's background
 // ### BACK TO TOP BUTTON and HEADERS BACKGROUND CHANGE ON SCROLL ###
-// window.onscroll = function () { scrollFunction() };
 window.onscroll = () => {
 
   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
