@@ -73,7 +73,7 @@ main {
 
 .verticalLine {
   width: 3px;
-  height: 3rem;
+  height: 4rem;
   border: 1px;
   border-style: solid;
   background-color: var(--color-red);
@@ -81,10 +81,15 @@ main {
   margin: 0 1rem;
 }
 
-#lives {
+#livesBox {
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+}
+
+.lives {
+  max-height: 40px;
 }
 
 #score {
@@ -228,7 +233,7 @@ footer {
 }
 
 #leftImgCover {
-  justify-content: flex-start;
+  justify-content:left;
 }
 
 #rightImgCover {
@@ -310,6 +315,10 @@ footer {
     width: 50vw;
   }
 
+  .verticalLine {
+    margin: 0 0.3rem;
+  }
+
   #circles_block {
     display: flex;
     flex-wrap: wrap;
@@ -328,7 +337,7 @@ footer {
   }
 
   #twoStanding {
-    margin-left: 1rem;
+    margin-left: 0;
   }
 
   .modal {

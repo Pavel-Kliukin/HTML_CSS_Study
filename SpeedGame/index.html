@@ -8,8 +8,6 @@
     <title>Speed Game</title>
   </head>
   <body>
-    <iframe src="assets/Sounds/silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
-    <audio autoplay loop  id="music">
       <source src="assets/Sounds/JamesBondTheme.mp3">
     </audio>
     <header>
@@ -22,8 +20,13 @@
     <main>
       <img id="fromRussia" src="assets/fromRussia.webp" alt="From Russia">
       <div id="controlPanel">
-        <div id="lives">
+        <div id="livesBox">
           LIVES
+          <div id="livesDisplay">
+            <img class="lives" id="live1" alt="alive">
+            <img class="lives" id="live2" alt="alive">
+            <img class="lives" id="live3" alt="alive">
+          </div>
         </div>
         <div class="verticalLine"></div>
         <div id="score">
@@ -35,7 +38,7 @@
           <div id="music">
             Music:&nbsp
             <label class="switch">
-              <input id="musicButton" type="checkbox" checked>
+              <input id="musicButton" type="checkbox">
               <span class="slider"></span>
             </label>
           </div>
@@ -55,12 +58,12 @@
         <button class="circles" id="c4"></button>
       </div>
       <div id="start_stop_button_block">
-        <button id="startButton">Start game</button>
-        <button id="stopButton" class="hidenButton">STOP</button>
+        <button id="startButton">Start mission</button>
+        <button id="stopButton" class="hidenButton">Abort mission</button>
       </div>
       <div class="overlay">
         <div class="modal">
-          <h2>Game over</h2>
+          <h2>Mission failed</h2>
           <p id="yourScore"></p>
           <p>
             Try one more time

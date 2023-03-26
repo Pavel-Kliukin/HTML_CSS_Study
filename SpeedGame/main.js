@@ -4,9 +4,11 @@ const yourScore = document.getElementById('yourScore')
 const startButton = document.querySelector('#startButton')
 const stopButton = document.querySelector('#stopButton')
 const closeButton = document.querySelector('#closeButton')
-// const music = new Audio('assets/Sounds/JamesBondTheme.mp3')
-const music = document.querySelector('#music')
+const music = new Audio('assets/Sounds/JamesBondTheme.mp3')
 const musicSwitcher = document.querySelector('#musicButton')
+const live1 = document.querySelector('#live1')
+const live2 = document.querySelector('#live2')
+const live3 = document.querySelector('#live3')
 let score = 0
 let hlCircleNumber = 0
 let timerHighlight
@@ -22,7 +24,8 @@ function startGame () { // Activates by Start button
 
   function newRound (hlCircle) {
     wasAlreadyClicked = false
-    if (missedRounds >= 4) {
+    if (missedRounds >= 3) {
+      live3.src = 'assets/dead.png'
       return stopGame()
     }
     timerHighlight = setTimeout(highliteCircle, pace) // here we initiates Highlight for next circle
@@ -35,6 +38,11 @@ function startGame () { // Activates by Start button
     }, pace)
     pace -= 10
     missedRounds++
+    if (missedRounds === 1) {
+      live1.src = 'assets/dead.png'
+    } else if (missedRounds === 2) {
+      live2.src = 'assets/dead.png'
+    }
   }
 
   function highliteCircle () {
@@ -76,7 +84,7 @@ function startGame () { // Activates by Start button
   highliteCircle()
 
   circles.forEach((circle, i) => {
-    circle.addEventListener('click', () => circleClicked(i + 1)) // () - anonimous function that starts another function circleClicked with parametr i
+    circle.addEventListener('click', () => circleClicked(i + 1)) // () - anonimous function that starts another function circleClicked with parametr i+1
   })
 }
 
@@ -104,16 +112,20 @@ function resetGame () {
   window.location.reload()
 }
 
-music.volume = 0.03
-startButton.addEventListener('click', startGame)
-stopButton.addEventListener('click', stopGame)
-closeButton.addEventListener('click', resetGame)
-musicSwitcher.addEventListener('click', () => {
-  console.log('Music clicked')
+function musicOnOff () {
   if (musicSwitcher.checked === true) {
     music.play()
     music.volume = 0.05
   } else {
     music.pause()
   }
-})
+}
+
+music.volume = 0.03
+live1.src = 'assets/alive.png'
+live2.src = 'assets/alive.png'
+live3.src = 'assets/alive.png'
+startButton.addEventListener('click', startGame)
+stopButton.addEventListener('click', stopGame)
+closeButton.addEventListener('click', resetGame)
+musicSwitcher.addEventListener('click', musicOnOff)
