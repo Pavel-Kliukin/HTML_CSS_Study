@@ -5,15 +5,57 @@
 }
 
 body {
-  background: linear-gradient(to left bottom, #efcf96, #a17a18);
-  background-repeat: no-repeat;
+  background-color: white;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 h1 {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  margin-top: 15vh;
+}
+
+/* HEADER */
+header {
+  background-color: rgb(194, 42, 42);
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+#headerContenet {
+  background-color: white;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerImg {
+  max-height: 100%;
+}
+
+#i007 {
+  padding-left: 1rem;
+}
+
+#twoShooting {
+  padding-right: 1rem;
+}
+
+/* MAIN */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:center;
+}
+
+#fromRussia {
+  width: 30vw;
 }
 
 #score {
@@ -25,22 +67,26 @@ h1 {
 
 #circles_block {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 2rem;
 }
 
 .circles {
-  height: 15vw;
-  width: 15vw;
-  border-radius: 50%;
+  background-image: url("assets/empty.jpg");
+  background-size: cover;
+  height: 12.2vw;
+  width: 19vw;
   border: none;
-  margin: 3vw;
+  margin: 1rem;
 }
 
 .highlighted {
-  background-color: aqua;
-  border: 3px;
-  border-style: dashed;
+  background-image: url("assets/stand.jpg");
+}
+
+.highlighted:hover {
+  background-image: url("assets/shoot.jpg");
 }
 
 #start_stop_button_block {
@@ -62,8 +108,58 @@ button {
   display:none;
 }
 
-/* overlay modal */
+/* FOOTER */
+footer {
+  background-color: rgb(194, 42, 42);
+  height: 20vh;
+  display: flex;
+  align-items:flex-start;
+}
 
+#footerContenet {
+  background-color: white;
+  width: 100%;
+  height: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+#leftImgCover, #rightImgCover {
+  width: 30vw;
+  max-height: 100%;
+  display: flex;
+}
+
+#rightImgCover {
+  justify-content: flex-end;
+}
+
+#footerTextCover {
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.footerImg {
+  max-height: 100%;
+}
+
+#twoStanding {
+  max-width: 100%;
+  margin-left: 3rem;
+  object-fit:contain;
+}
+
+#topSecret {
+  max-width: 100%;
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+  object-fit:contain;
+}
+
+/* OVERLAY */
 .overlay {
   background-color: #333;
   position: fixed;
@@ -107,10 +203,11 @@ button {
   right: 0.5rem;
 }
 
+/* MEDIA */
 @media (max-width: 576px) {
-  .circles {
-    height: 30vw;
-    width: 30vw;
+
+  #fromRussia {
+    width: 50vw;
   }
 
   #circles_block {
@@ -118,6 +215,20 @@ button {
     flex-wrap: wrap;
     justify-content: center;
     margin: 2rem;
+  }
+
+  .circles {
+    height: 21.96vw;
+    width: 34.2vw;
+    margin: 0.5rem;
+  }
+
+  footer {
+    height: 10vh;
+  }
+
+  #twoStanding {
+    margin-left: 1rem;
   }
 
   .modal {

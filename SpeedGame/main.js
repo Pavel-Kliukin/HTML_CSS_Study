@@ -7,8 +7,9 @@ const closeButton = document.querySelector('#closeButton')
 let score = 0
 let hlCircleNumber = 0
 let timer
-let pace = 1000
+let pace = 1300
 let missedRounds = 0
+let wasAlreadyClicked = false // this variable is for avoid get multiple points for multiple clicking on same highlighted circle
 
 function startGame () {
   startButton.classList.add('hidenButton')
@@ -16,11 +17,12 @@ function startGame () {
   scoreIs.textContent = 0
 
   function newRound (hlCircle) {
+    wasAlreadyClicked = false
     if (missedRounds >= 4) {
       return stopGame()
     }
-    timer = setTimeout(highliteCircle, pace)
-    setTimeout(() => hlCircle.classList.remove('highlighted'), pace)
+    timer = setTimeout(highliteCircle, pace) // here we add the highlight to circle
+    setTimeout(() => hlCircle.classList.remove('highlighted'), pace) // here we remove the highlight from the circle
     pace -= 10
     missedRounds++
   }
@@ -39,9 +41,12 @@ function startGame () {
 
   function circleClicked (i) {
     if (i === hlCircleNumber) {
-      score += 1
-      missedRounds = 0
-      scoreIs.textContent = score
+      if (!wasAlreadyClicked) {
+        score += 1
+        missedRounds = 0
+        scoreIs.textContent = score
+        wasAlreadyClicked = true
+      }
     } else {
       stopGame()
     }
@@ -56,7 +61,7 @@ function startGame () {
 
 function stopGame () {
   const closeButton = document.querySelector('#closeButton')
-  hlCircleNumber = 0 // to cut the possibilty of proceeding game and getting points
+  hlCircleNumber = 0 // to cut the possibility of proceeding game and getting points
 
   function modalShow () {
     document.querySelector('.overlay').classList.toggle('visible')
