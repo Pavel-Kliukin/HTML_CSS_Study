@@ -8,6 +8,10 @@
     <title>Speed Game</title>
   </head>
   <body>
+    <iframe src="assets/Sounds/silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+    <audio autoplay loop  id="music">
+      <source src="assets/Sounds/JamesBondTheme.mp3">
+    </audio>
     <header>
       <div id="headerContenet">
         <img id="i007" class="headerImg" src="assets/007.png" alt="007">
@@ -17,9 +21,32 @@
     </header>
     <main>
       <img id="fromRussia" src="assets/fromRussia.webp" alt="From Russia">
-      <div id="score">
-        Score:&nbsp
-        <span id="scoreIs">0</span>
+      <div id="controlPanel">
+        <div id="lives">
+          LIVES
+        </div>
+        <div class="verticalLine"></div>
+        <div id="score">
+          Score:&nbsp
+          <span id="scoreIs">0</span>
+        </div>
+        <div class="verticalLine"></div>
+        <div id="soundsControl">
+          <div id="music">
+            Music:&nbsp
+            <label class="switch">
+              <input id="musicButton" type="checkbox" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div id="sounds">
+            Soounds:&nbsp
+            <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
       </div>
       <div id="circles_block">
         <button class="circles" id="c1"></button>

@@ -4,14 +4,18 @@ const yourScore = document.getElementById('yourScore')
 const startButton = document.querySelector('#startButton')
 const stopButton = document.querySelector('#stopButton')
 const closeButton = document.querySelector('#closeButton')
+// const music = new Audio('assets/Sounds/JamesBondTheme.mp3')
+const music = document.querySelector('#music')
+const musicSwitcher = document.querySelector('#musicButton')
 let score = 0
 let hlCircleNumber = 0
-let timer
+let timerHighlight
+let timerAim
 let pace = 1300
 let missedRounds = 0
-let wasAlreadyClicked = false // this variable is for avoid get multiple points for multiple clicking on same highlighted circle
+let wasAlreadyClicked = false // this variable is for avoid geting multiple points for multiple clicking on same highlighted circle
 
-function startGame () {
+function startGame () { // Activates by Start button
   startButton.classList.add('hidenButton')
   stopButton.classList.remove('hidenButton')
   scoreIs.textContent = 0
@@ -21,8 +25,14 @@ function startGame () {
     if (missedRounds >= 4) {
       return stopGame()
     }
-    timer = setTimeout(highliteCircle, pace) // here we add the highlight to circle
-    setTimeout(() => hlCircle.classList.remove('highlighted'), pace) // here we remove the highlight from the circle
+    timerHighlight = setTimeout(highliteCircle, pace) // here we initiates Highlight for next circle
+    timerAim = setTimeout(() => { // we add class aim to now highlited circle
+      hlCircle.classList.remove('highlighted')
+      hlCircle.classList.add('aim')
+    }, pace / 2) // here we remove the highlight and aim from the current circle
+    setTimeout(() => {
+      hlCircle.classList.remove('aim')
+    }, pace)
     pace -= 10
     missedRounds++
   }
@@ -40,15 +50,26 @@ function startGame () {
   }
 
   function circleClicked (i) {
+    const hlCircle = document.querySelector(`#c${hlCircleNumber}`)
     if (i === hlCircleNumber) {
       if (!wasAlreadyClicked) {
         score += 1
+        clearTimeout(timerAim)
+        hlCircle.classList.remove('highlighted')
+        hlCircle.classList.remove('aim')
         missedRounds = 0
         scoreIs.textContent = score
         wasAlreadyClicked = true
       }
     } else {
-      stopGame()
+      clearTimeout(timerHighlight)
+      clearTimeout(timerAim)
+      hlCircle.classList.remove('highlighted')
+      hlCircle.classList.remove('aim')
+      hlCircle.classList.add('shot')
+      setTimeout(() => {
+        stopGame()
+      }, 2000)
     }
   }
 
@@ -60,6 +81,8 @@ function startGame () {
 }
 
 function stopGame () {
+  clearTimeout(timerHighlight)
+  clearTimeout(timerAim)
   const closeButton = document.querySelector('#closeButton')
   hlCircleNumber = 0 // to cut the possibility of proceeding game and getting points
 
@@ -75,13 +98,22 @@ function stopGame () {
   modalShow()
 
   closeButton.addEventListener('click', modalShow)
-  clearTimeout(timer)
 }
 
 function resetGame () {
   window.location.reload()
 }
 
+music.volume = 0.03
 startButton.addEventListener('click', startGame)
 stopButton.addEventListener('click', stopGame)
 closeButton.addEventListener('click', resetGame)
+musicSwitcher.addEventListener('click', () => {
+  console.log('Music clicked')
+  if (musicSwitcher.checked === true) {
+    music.play()
+    music.volume = 0.05
+  } else {
+    music.pause()
+  }
+})
