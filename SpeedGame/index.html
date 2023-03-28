@@ -5,20 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <!-- Favicon icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+
     <title>Speed Game</title>
   </head>
   <body>
-      <source src="assets/Sounds/JamesBondTheme.mp3">
+      <source src="./assets/Sounds/JamesBondTheme.mp3">
     </audio>
     <header>
       <div id="headerContenet">
-        <img id="i007" class="headerImg" src="assets/007.png" alt="007">
+        <img id="i007" class="headerImg" src="./assets/007.png" alt="007">
         <h1>Speed Game</h1>
-        <img id="twoShooting" class="headerImg" src="assets/twoShooting.png" alt="Two shooting">
+        <img id="twoShooting" class="headerImg" src="./assets/twoShooting.png" alt="Two shooting">
       </div>
     </header>
     <main>
-      <img id="fromRussia" src="assets/fromRussia.webp" alt="From Russia">
+      <img id="fromRussia" src="./assets/fromRussia.webp" alt="From Russia">
       <div id="controlPanel">
         <div id="livesBox">
           LIVES
@@ -43,9 +48,9 @@
             </label>
           </div>
           <div id="sounds">
-            Soounds:&nbsp
+            Sounds:&nbsp
             <label class="switch">
-              <input type="checkbox" checked>
+              <input id="soundButton" type="checkbox" checked>
               <span class="slider"></span>
             </label>
           </div>
@@ -61,30 +66,32 @@
         <button id="startButton">Start mission</button>
         <button id="stopButton" class="hidenButton">Abort mission</button>
       </div>
-      <div class="overlay">
-        <div class="modal">
-          <h2>Mission failed</h2>
-          <p id="yourScore"></p>
-          <p>
-            Try one more time
-          </p>
-          <button id="closeButton" class="btn">x</button>
-        </div>
-      </div>
     </main>
     <footer>
       <div id="footerContenet">
         <div id="leftImgCover">
-          <img id="twoStanding" class="footerImg" src="assets/twoStanding.png" alt="Two standing">
+          <img id="twoStanding" class="footerImg" src="./assets/twoStanding.png" alt="Two standing">
         </div>
         <div id="footerTextCover">
-          <p id="footerText">Copyright © Made by Pavel Kliukin in 2023</p>
+          <p id="footerText">Copyright © Made by Pavel Kliukin</p>
         </div>
         <div id="rightImgCover">
-          <img id="topSecret" class="footerImg" src="assets/topSecret.png" alt="Top Secret">
+          <img id="topSecret" class="footerImg" src="./assets/topSecret.png" alt="Top Secret">
         </div>
       </div>
     </footer>
+    <div class="overlay">
+      <div class="modal">
+        <h2>Mission failed</h2>
+        <p id="yourScore"></p>
+        <p>
+          Try one more time
+        </p>
+        <button id="closeButton" class="btn">x</button>
+        <img id="classified" src="./assets/classified.png" alt="Classified">
+      </div>
+    </div>
+    <div class="circlesClickPreventer"></div>
     <script src="main.js"></script>
   </body>
 </html>

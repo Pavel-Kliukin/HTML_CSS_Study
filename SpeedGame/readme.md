@@ -1,9 +1,7 @@
-# Speed Game
-
-## The game works, but I didn't do the design yet :(
-Sounds doesn't ready as well
+# Speed Game with James Bond theme
 
 ## Rules
-- after game started, you should click the highlighted cirlces and get points
-- if you click the circle after it lost it's highlight, you loose
-- if you don't click any circkles 4 times in a row, you loose
+- At the start, you have 3 lives
+- after game started, you should kill your enemy by cklicking on him before he shot you
+- if you click wrong window, you loose 1 life
+- if you don't click on your enemy befor his shot, you also loose 1 life
