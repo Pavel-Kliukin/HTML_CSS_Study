@@ -292,7 +292,7 @@ footer {
   background-color: white;
   opacity: 1;
   color: #333;
-  height: 20vh;
+  height: 23vh;
   width: 40vw;
   padding: 2rem;
   border-radius: 5px;
@@ -300,8 +300,8 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  position: relative
-    /*so the button could position itself*/
+  position: relative;
+  /*so the button could position itself*/
   ;
 }
 
@@ -310,6 +310,61 @@ footer {
   position: absolute;
   top: 5%;
   left: 2%;
+}
+
+#looser {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.looserImg {
+  max-height: 100%;
+  max-width: 30%;
+  display: flex;
+  object-fit: contain;
+}
+
+#fingerIMG {
+  max-width: 20%;
+  padding-right: 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+#serIMG,
+#fingerIMG {
+  opacity: 0;
+  animation-name: imgAppear;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes imgAppear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#looIMG {
+  animation: looRotate;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes looRotate {
+  to {
+    transform: rotate(180deg);
+  }
 }
 
 .btn {
