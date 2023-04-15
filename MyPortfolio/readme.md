@@ -15,6 +15,6 @@ This is my training project that simulates a portfolio site.
 - Animated background on Gallery page.
 - Adaptation of site for mobile devices.
 
-### ****
+### **Check it by yourself:**
 
-[![Portfolio](https://public.bc.fi/s2300102/MyPortfolio/index.html)
+https://public.bc.fi/s2300102/MyPortfolio/index.html
