@@ -13,7 +13,7 @@ This is my training project that simulates a portfolio site.
 - Animation in "skills" boxes that starts when user scrolls to the "skills" section.
 - Navigation links that scrolls user to it's sections.
 - Animated background on Gallery page.
-- Adaptation of site for mobile devices.
+- Website adaptation for mobile devices.
 
 ### **Check it by yourself:**
 
