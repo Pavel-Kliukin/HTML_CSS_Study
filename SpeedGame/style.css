@@ -305,6 +305,10 @@ footer {
   ;
 }
 
+#missionfailed {
+  z-index: 1;
+}
+
 #classified {
   width: 20%;
   position: absolute;
@@ -317,7 +321,6 @@ footer {
   height: 15%;
   display: flex;
   justify-content: center;
-  align-items: center;
   position: relative;
 }
 
@@ -329,10 +332,15 @@ footer {
 }
 
 #fingerIMG {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 100%;
+  font-weight: bold;
+  font-style: italic;
   max-width: 20%;
   padding-right: 5px;
   display: flex;
   justify-content: flex-end;
+  align-items: start;
 }
 
 
@@ -340,16 +348,28 @@ footer {
 #fingerIMG {
   opacity: 0;
   animation-name: imgAppear;
-  animation-duration: 6s;
+  animation-duration: 5s;
   animation-fill-mode: forwards;
 }
 
 @keyframes imgAppear {
-  from {
+  0% {
     opacity: 0;
   }
 
-  to {
+  40% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 0.3;
+  }
+
+  85% {
+    opacity: 0.7;
+  }
+
+  100% {
     opacity: 1;
   }
 }
@@ -430,6 +450,7 @@ footer {
   }
 
   .modal {
-    width: 80vw;
+    height: 30vh;
+    width: 84vw;
   }
 }

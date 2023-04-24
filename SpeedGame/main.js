@@ -74,7 +74,7 @@ function circleClicked (i) {
       hlCircle.classList.remove('enemyKilled')
       newRound(hlCircleNumber)
     }, 500)
-  } else { // if highlighted (right) circle was clicked
+  } else { // if wrong circle was clicked
     deadState()
   }
 }
@@ -101,7 +101,7 @@ function newRound (prevHlCircleNumber = 0) { // prevHLCircle is a number of prev
 
   function highliteCircle () {
     const randomNumber = Math.floor(Math.random() * 4 + 1)
-    if (prevHlCircleNumber === randomNumber) { // if random number is equival to the number of already highlighted circle
+    if (prevHlCircleNumber === randomNumber) { // if random number is equal to the number of already highlighted circle
       highliteCircle(prevHlCircleNumber) // then we choose another random number
     } else {
       hlCircle = document.querySelector(`#c${randomNumber}`)
