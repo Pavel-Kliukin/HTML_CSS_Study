@@ -195,6 +195,7 @@ input:checked+.slider:before {
   background-image: url("./assets/enemyKilled.jpg");
 }
 
+/* BUTTONS */
 #start_stop_button_block {
   display: flex;
   justify-content: center;

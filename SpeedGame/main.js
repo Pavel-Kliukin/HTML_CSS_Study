@@ -13,7 +13,6 @@ live3.src = 'assets/alive.png'
 
 let score = 0
 let hlCircleNumber = 0
-let timerHighlight
 let timerAim
 let timerShot
 let hlCircle
@@ -54,7 +53,6 @@ function startGame () {
 
 // ACTIONS IN CASE OF ONE OF THE CIRCLES WAS CLICKED
 function circleClicked (i) {
-  clearTimeout(timerHighlight)
   clearTimeout(timerAim)
   clearTimeout(timerShot)
   // blockes circles to prevent them from clicking
@@ -125,7 +123,6 @@ function newRound (prevHlCircleNumber = 0) { // prevHLCircle is a number of prev
 
 // DEAD STATE
 function deadState () {
-  clearTimeout(timerHighlight)
   clearTimeout(timerAim)
   clearTimeout(timerShot)
   if (soundSwitcher.checked) {
@@ -160,7 +157,6 @@ function deadState () {
 
 // SHOWS TOTAL SCORES AND COMMENT
 function stopGame () {
-  clearTimeout(timerHighlight)
   clearTimeout(timerAim)
   clearTimeout(timerShot)
 
