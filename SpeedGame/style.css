@@ -415,7 +415,16 @@ footer {
 }
 
 /* MEDIA */
-@media (max-width: 576px) {
+@media (max-width: 800px) {
+
+  .circles {
+    height: 21.96vw;
+    width: 34.2vw;
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 590px) {
 
   #fromRussia {
     width: 50vw;
@@ -430,12 +439,6 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     margin: 2rem;
-  }
-
-  .circles {
-    height: 21.96vw;
-    width: 34.2vw;
-    margin: 0.5rem;
   }
 
   footer {
